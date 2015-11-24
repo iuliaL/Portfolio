@@ -1,0 +1,33 @@
+/*--------------------------------Base Styles*/
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 120px;
+  font-family: "Hind", sans-serif; }
+
+/*--------------------------------Navbar */
+.navbar-reset {
+  border: none;
+  max-width: 1370px;
+  margin: auto;
+  font-family: "Cantarell", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  background: #fff; }
+  @media (max-width: 768px) {
+    .navbar-reset {
+      border-bottom: 15px solid yellow;
+      border-right: 15px solid yellow; } }
+
+@media (min-width: 769px) {
+  .nav-border-bottom-right {
+    border-bottom: 15px solid yellow;
+    border-right: 15px solid yellow; } }
+
+.logo-link {
+  padding: 0; }
+
+.logo-img {
+  height: 115px; }
+
+/*# sourceMappingURL=style.css.map */
