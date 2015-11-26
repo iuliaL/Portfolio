@@ -92,11 +92,10 @@ body {
   @media (max-width: 768px) {
     .portrait {
       padding: 100px;
+      padding-right: 0;
       margin-bottom: -120px;
       margin-top: -200px;
-      z-index: 100;
-      position: relative;
-      right: -80px; } }
+      z-index: 100; } }
 
 /*--- About section------------*/
 .about {
