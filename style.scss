@@ -109,12 +109,13 @@ body {
 
 /*--- About section------------*/
 .about {    z-index: 1000;
+    		
 	p {
 		@include first-letter(yellow);
+		background: #000;
 		font-size: 1.2em;
     	padding: 30px;
     	color: #eee;
-    	background: #000;
     	margin-bottom: 0;
     	}
 

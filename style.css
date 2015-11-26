@@ -7,6 +7,11 @@
   top: 50%;
   transform: translateY(-50%); }
 
+@media (max-width: 768px) {
+  .no-padding-xs {
+    padding-left: 0;
+    padding-right: 0; } }
+
 /*--------------------------------Base Styles*/
 body {
   margin: 0;
@@ -97,10 +102,10 @@ body {
 .about {
   z-index: 1000; }
   .about p {
+    background: #000;
     font-size: 1.2em;
     padding: 30px;
     color: #eee;
-    background: #000;
     margin-bottom: 0; }
     .about p::first-letter {
       font-size: 200%;
