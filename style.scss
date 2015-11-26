@@ -21,16 +21,19 @@ body {
 	background: #fff;
 	@media (max-width: 768px){
 		  border-bottom: 15px solid yellow;
-		  border-right: 15px solid yellow;
 		  margin-bottom: 0;
 		}
-}
-
-.nav-border-bottom-right {
-	@media (min-width: 769px){
-		  border-bottom: 15px solid yellow;
+	.yellow-border {
+		@media (min-width: 769px){
 		  border-right: 15px solid yellow;
 		}
+	}
+}
+
+.nav-border-bottom {
+	@media (min-width: 769px){
+		  border-bottom: 15px solid yellow;
+		  }
  }
 .nav-btn {
 	margin-bottom: 0;

@@ -24,13 +24,14 @@ body {
   @media (max-width: 768px) {
     .navbar-reset {
       border-bottom: 15px solid yellow;
-      border-right: 15px solid yellow;
       margin-bottom: 0; } }
+  @media (min-width: 769px) {
+    .navbar-reset .yellow-border {
+      border-right: 15px solid yellow; } }
 
 @media (min-width: 769px) {
-  .nav-border-bottom-right {
-    border-bottom: 15px solid yellow;
-    border-right: 15px solid yellow; } }
+  .nav-border-bottom {
+    border-bottom: 15px solid yellow; } }
 
 .nav-btn {
   margin-bottom: 0;
