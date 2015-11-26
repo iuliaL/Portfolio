@@ -1,15 +1,22 @@
+.container-fluid-max-width {
+  max-width: 1370px;
+  margin: auto; }
+
+.vertical-middle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
 /*--------------------------------Base Styles*/
 body {
   margin: 0;
   padding: 0;
-  padding-top: 120px;
   font-family: "Hind", sans-serif; }
 
 /*--------------------------------Navbar */
 .navbar-reset {
   border: none;
-  max-width: 1370px;
-  margin: auto;
+  margin-bottom: 20px;
   font-family: "Cantarell", sans-serif;
   font-weight: 500;
   font-size: 1.2em;
@@ -17,17 +24,327 @@ body {
   @media (max-width: 768px) {
     .navbar-reset {
       border-bottom: 15px solid yellow;
-      border-right: 15px solid yellow; } }
+      border-right: 15px solid yellow;
+      margin-bottom: 0; } }
 
 @media (min-width: 769px) {
   .nav-border-bottom-right {
     border-bottom: 15px solid yellow;
     border-right: 15px solid yellow; } }
 
+.nav-btn {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 36px 15px;
+  border: none; }
+  .nav-btn:focus, .nav-btn:hover {
+    border-radius: 0;
+    background-color: #eee !important; }
+  .nav-btn i {
+    display: block;
+    font-size: 1.5em;
+    color: #000; }
+    .nav-btn i:first-child {
+      font-size: 0.8em;
+      font-weight: 700;
+      margin-bottom: -10px; }
+
 .logo-link {
   padding: 0; }
 
 .logo-img {
   height: 115px; }
+
+/*--- Jumbotron------------*/
+@media (max-width: 768px) {
+  .jumbotron {
+    padding: 30px; } }
+.jumbotron p {
+  margin-top: 30px; }
+  .jumbotron p::first-letter {
+    font-size: 200%;
+    color: #333;
+    line-height: 0.5; }
+@media (max-width: 992px) {
+  .jumbotron h1 {
+    font-size: 30px; }
+  .jumbotron h2 {
+    font-size: 20px; }
+  .jumbotron p {
+    font-size: 15px; } }
+.jumbotron .about-btn {
+  background-color: #000;
+  border-radius: 0;
+  font-family: Cantarell;
+  border: none; }
+  .jumbotron .about-btn:hover {
+    border: none;
+    color: #999;
+    text-shadow: 0 1px 0 #333; }
+
+.portrait {
+  padding: 40px 40px; }
+  @media (max-width: 768px) {
+    .portrait {
+      padding: 100px;
+      margin-bottom: -120px;
+      margin-top: -200px;
+      z-index: 100;
+      position: relative;
+      right: -80px; } }
+
+/*--- About section------------*/
+.about {
+  z-index: 1000; }
+  .about p {
+    font-size: 1.2em;
+    padding: 30px;
+    color: #eee;
+    background: #000;
+    margin-bottom: 0; }
+    .about p::first-letter {
+      font-size: 200%;
+      color: yellow;
+      line-height: 0.5; }
+
+/*--- Goal section------------*/
+.border {
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  padding: 40px; }
+  .border p {
+    font-size: 1.4em;
+    font-family: "Cantarell", sans-serif;
+    color: #333;
+    display: inline-block; }
+    @media (min-width: 768px) {
+      .border p {
+        width: 70%; } }
+    @media (min-width: 992px) {
+      .border p {
+        width: 80%; } }
+  .border .honeycomb {
+    vertical-align: top; }
+    @media (min-width: 768px) {
+      .border .honeycomb {
+        width: 28%;
+        margin-top: 20px; } }
+    @media (min-width: 992px) {
+      .border .honeycomb {
+        width: 18%; } }
+    @media (min-width: 1200px) {
+      .border .honeycomb {
+        margin-top: 0; } }
+
+/*--- Skills section------------*/
+.skills {
+  background: #000;
+  padding: 20px;
+  font-family: "Cantarell", sans-serif; }
+  .skills h2 {
+    margin: 0 40px;
+    font-weight: 700;
+    color: #555; }
+  .skills strong {
+    color: #999;
+    font-size: 1.3em; }
+  .skills p {
+    font-size: 1.2em;
+    margin: 20px 40px;
+    color: #fff; }
+  .skills .skill-column {
+    padding: 10px 45px; }
+
+.skill-HTML {
+  background-color: #111;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: none;
+  height: 30px;
+  overflow: visible; }
+  .skill-HTML .skill-bar {
+    background-color: #d6411b;
+    box-shadow: 0 -2px 1px black;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-HTML span {
+    font-size: 1.5em;
+    font-family: Cantarell;
+    font-weight: 400;
+    text-shadow: 0 -2px 1px black;
+    color: #eee; }
+
+.skill-CSS {
+  background-color: #111;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: none;
+  height: 30px;
+  overflow: visible; }
+  .skill-CSS .skill-bar {
+    background-color: #0000e6;
+    box-shadow: 0 -2px 1px black;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-CSS span {
+    font-size: 1.5em;
+    font-family: Cantarell;
+    font-weight: 400;
+    text-shadow: 0 -2px 1px black;
+    color: #eee; }
+
+.skill-Sass {
+  background-color: #111;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: none;
+  height: 30px;
+  overflow: visible; }
+  .skill-Sass .skill-bar {
+    background-color: #c0407f;
+    box-shadow: 0 -2px 1px black;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-Sass span {
+    font-size: 1.5em;
+    font-family: Cantarell;
+    font-weight: 400;
+    text-shadow: 0 -2px 1px black;
+    color: #eee; }
+
+.skill-Bootstrap {
+  background-color: #111;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: none;
+  height: 30px;
+  overflow: visible; }
+  .skill-Bootstrap .skill-bar {
+    background-color: #58417b;
+    box-shadow: 0 -2px 1px black;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-Bootstrap span {
+    font-size: 1.5em;
+    font-family: Cantarell;
+    font-weight: 400;
+    text-shadow: 0 -2px 1px black;
+    color: #eee; }
+
+.skill-jQuery {
+  background-color: #111;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: none;
+  height: 30px;
+  overflow: visible; }
+  .skill-jQuery .skill-bar {
+    background-color: #252525;
+    box-shadow: 0 -2px 1px black;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-jQuery span {
+    font-size: 1.5em;
+    font-family: Cantarell;
+    font-weight: 400;
+    text-shadow: 0 -2px 1px black;
+    color: #eee; }
+
+.skill-AJAX {
+  background-color: #111;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: none;
+  height: 30px;
+  overflow: visible; }
+  .skill-AJAX .skill-bar {
+    background-color: #297db4;
+    box-shadow: 0 -2px 1px black;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-AJAX span {
+    font-size: 1.5em;
+    font-family: Cantarell;
+    font-weight: 400;
+    text-shadow: 0 -2px 1px black;
+    color: #eee; }
+
+.skill-JS {
+  background-color: #111;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: none;
+  height: 30px;
+  overflow: visible; }
+  .skill-JS .skill-bar {
+    background-color: #5e0e33;
+    box-shadow: 0 -2px 1px black;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-JS span {
+    font-size: 1.5em;
+    font-family: Cantarell;
+    font-weight: 400;
+    text-shadow: 0 -2px 1px black;
+    color: #eee; }
+
+.skill-Git {
+  background-color: #111;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: none;
+  height: 30px;
+  overflow: visible; }
+  .skill-Git .skill-bar {
+    background-color: #6c4a29;
+    box-shadow: 0 -2px 1px black;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-Git span {
+    font-size: 1.5em;
+    font-family: Cantarell;
+    font-weight: 400;
+    text-shadow: 0 -2px 1px black;
+    color: #eee; }
 
 /*# sourceMappingURL=style.css.map */

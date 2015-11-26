@@ -1,11 +1,11 @@
 
 @import "_variables.scss";
+@import "_mixins&extends";
 
 /*--------------------------------Base Styles*/
 body { 
 	margin: 0;
 	padding: 0;
-	padding-top: 120px; 
 	font-family: $Hind;
 }
 
@@ -13,8 +13,7 @@ body {
 /*--------------------------------Navbar */
 .navbar-reset {
 	border: none;
-	max-width: 1370px;
-	margin: auto;
+	margin-bottom: 20px;
 	font: { family: $Cantarell;
 			weight: 500;
 			size: 1.2em;
@@ -23,7 +22,7 @@ body {
 	@media (max-width: 768px){
 		  border-bottom: 15px solid yellow;
 		  border-right: 15px solid yellow;
-
+		  margin-bottom: 0;
 		}
 }
 
@@ -33,6 +32,27 @@ body {
 		  border-right: 15px solid yellow;
 		}
  }
+.nav-btn {
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 36px 15px;
+	border: none;
+	&:focus, &:hover {
+		border-radius: 0;
+		background-color: #eee !important;
+	}
+	i {
+		display: block;
+		font-size: 1.5em;
+		color: #000;
+		&:first-child {
+			font-size: 0.8em;
+			font-weight: 700;
+			margin-bottom: -10px;
+		}
+	}
+
+}
 
 .logo-link {
 	padding: 0;
@@ -40,4 +60,138 @@ body {
 
 .logo-img {
 	height: 115px;
+}
+
+/*--- Jumbotron------------*/
+.jumbotron {
+	@media (max-width: 768px) {
+		padding: 30px;
+	}
+	p {
+		@include first-letter(#333);
+		margin-top: 30px;
+	}
+	@media (max-width: 992px ) {
+		h1 {
+			font-size: 30px;
+		}
+		h2 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+	.about-btn {
+		    background-color: #000;
+    		border-radius: 0;
+    		font-family: Cantarell;
+    		border: none;
+    		&:hover {
+    			border: none;
+    			color: #999;
+    			text-shadow: 0 1px 0 #333;
+    		}
+	}	
+}
+
+.portrait {
+	padding: 40px 40px;
+	@media (max-width: 768px) {
+		padding: 100px;
+    	margin-bottom: -120px;
+    	margin-top: -200px;
+    	z-index: 100;
+    	position: relative;
+    	right: -80px;
+	}
+}
+
+/*--- About section------------*/
+.about {    z-index: 1000;
+	p {
+		@include first-letter(yellow);
+		font-size: 1.2em;
+    	padding: 30px;
+    	color: #eee;
+    	background: #000;
+    	margin-bottom: 0;
+    	}
+
+}
+/*--- Goal section------------*/
+ .border {
+ 	border-top: 5px solid black;
+ 	border-left: 5px solid black;
+ 	padding: 40px;
+
+ 	p {
+ 		font-size: 1.4em;
+    	font-family: $Cantarell;
+    	@media (min-width: 768px) {width: 70%;}
+    	@media (min-width: 992px) {width: 80%;}
+    	color: #333;
+    	display: inline-block;
+ 	}
+ 	.honeycomb {
+ 		vertical-align: top;
+ 		@media (min-width: 768px) {width: 28%; margin-top: 20px;}
+    	@media (min-width: 992px) {width: 18%;}
+    	@media (min-width: 1200px) {margin-top: 0;}
+    		 		
+ 	}
+ }
+
+/*--- Skills section------------*/
+.skills {
+	background: #000;
+	padding: 20px;
+	font-family: $Cantarell;
+	h2 {
+ 		margin: 0 40px;
+ 		font-weight: 700;
+ 		color: #555;
+ 		}
+ 	strong {
+ 		color: #999;
+ 		font-size: 1.3em;
+ 	}
+	p {
+		font-size: 1.2em;
+		margin: 20px 40px;
+		color: #fff;
+	}
+	.skill-column {
+		padding: 10px 45px;
+    	}
+    
+}
+
+.skill-HTML {
+	@include skill($HTML);
+}
+.skill-CSS {
+	@include skill($CSS);
+}
+
+.skill-Sass {
+	@include skill($Sass);
+}
+
+.skill-Bootstrap {
+	@include skill($Bootstrap);
+}
+.skill-jQuery {
+	@include skill($jQuery);
+}
+
+.skill-AJAX {
+	@include skill($AJAX);
+}
+
+.skill-JS {
+	@include skill($JS);
+}
+.skill-Git {
+	@include skill($Git);
 }

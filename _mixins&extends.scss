@@ -1,0 +1,49 @@
+
+
+@mixin first-letter($color){
+	&::first-letter {
+    	font-size: 200%;
+    	color: $color;
+    	line-height: 0.5;
+    	}
+       }
+
+
+@mixin skill($bar-color) {
+	background-color: #111;
+    border-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: none;
+    height: 30px;
+    overflow: visible;
+    .skill-bar {
+    	background-color: darken($bar-color, 5%);
+    	box-shadow: 0 -2px 1px black;
+    	border-bottom-left-radius: 15px;
+   		border-top-right-radius: 15px;
+    	line-height: 7px;
+    	text-align: right;
+    	padding-right: 10px;
+    	padding-left: 10px;
+    }
+    span {
+    	font-size: 1.5em;
+    	font-family: Cantarell;
+    	font-weight: 400;
+    	text-shadow: 0 -2px 1px black;
+    	color: #eee;
+
+    }
+}
+
+.container-fluid-max-width {
+	max-width: 1370px;
+	margin: auto;
+}
+
+.vertical-middle {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
