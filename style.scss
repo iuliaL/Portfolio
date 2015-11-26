@@ -79,8 +79,10 @@ body {
 			font-size: 20px;
 		}
 		p {
-			font-size: 15px;
+			position: relative;
 			z-index: 1000;
+			font-size: 15px;
+			
 		}
 	}
 	.about-btn {
@@ -88,6 +90,7 @@ body {
     		border-radius: 0;
     		font-family: Cantarell;
     		border: none;
+    		position: relative;
     		z-index: 1000;
     		&:hover {
     			border: none;
@@ -108,10 +111,11 @@ body {
 
 /*--- About section------------*/
 .about {    z-index: 1000;
-    		
+		   	background: #000;
+
 	p {
 		@include first-letter(yellow);
-		background: #000;
+		
 		font-size: 1.2em;
     	padding: 30px;
     	color: #eee;
@@ -124,6 +128,8 @@ body {
  	border-top: 5px solid black;
  	border-left: 5px solid black;
  	padding: 40px;
+ 	margin-left: -15px;
+    margin-right: -15px;
 
  	p {
  		font-size: 1.4em;
@@ -147,6 +153,8 @@ body {
 	background: #000;
 	padding: 20px;
 	font-family: $Cantarell;
+	margin-left: -15px;
+    margin-right: -15px;
 	@media (max-width: 768px) {
 		padding: 20px 0px;
 	}
