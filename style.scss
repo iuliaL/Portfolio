@@ -80,6 +80,7 @@ body {
 		}
 		p {
 			font-size: 15px;
+			z-index: 1000;
 		}
 	}
 	.about-btn {
@@ -87,6 +88,7 @@ body {
     		border-radius: 0;
     		font-family: Cantarell;
     		border: none;
+    		z-index: 1000;
     		&:hover {
     			border: none;
     			color: #999;
@@ -98,14 +100,10 @@ body {
 .portrait {
 	padding: 40px 40px;
 	@media (max-width: 768px) {
-		padding: 100px;
-		padding-right: 0; 
-    	margin-bottom: -120px;
+		margin-bottom: -60px;
     	margin-top: -200px;
     	z-index: 100;
-    	//position: relative;
-    	//right: -80px;
-	}
+    	}
 }
 
 /*--- About section------------*/
@@ -149,6 +147,9 @@ body {
 	background: #000;
 	padding: 20px;
 	font-family: $Cantarell;
+	@media (max-width: 768px) {
+		padding: 20px 0px;
+	}
 	h2 {
  		margin: 0 40px;
  		font-weight: 700;
@@ -156,8 +157,7 @@ body {
  		}
  	strong {
  		color: #999;
- 		font-size: 1.3em;
- 	}
+ 		}
 	p {
 		font-size: 1.2em;
 		margin: 20px 40px;
