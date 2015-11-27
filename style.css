@@ -16,7 +16,7 @@ body {
 /*--------------------------------Navbar */
 .navbar-reset {
   border: none;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-family: "Cantarell", sans-serif;
   font-weight: 500;
   font-size: 1.2em;
@@ -56,38 +56,44 @@ body {
   height: 115px; }
 
 /*--- Jumbotron------------*/
-@media (max-width: 768px) {
-  .jumbotron {
-    padding: 30px; } }
-.jumbotron p {
-  margin-top: 30px; }
-  .jumbotron p::first-letter {
-    font-size: 200%;
-    color: #333;
-    line-height: 0.5; }
-@media (max-width: 992px) {
-  .jumbotron h1 {
-    font-size: 30px; }
-  .jumbotron h2 {
-    font-size: 20px; }
-  .jumbotron p {
-    position: relative;
-    z-index: 1000;
-    font-size: 15px; } }
-.jumbotron .about-btn {
-  background-color: #000;
-  border-radius: 0;
-  font-family: Cantarell;
-  border: none;
-  position: relative;
-  z-index: 1000; }
-  .jumbotron .about-btn:hover {
+.jumbotron-custom {
+  margin-bottom: 0;
+  border-radius: 0 !important; }
+  @media (max-width: 768px) {
+    .jumbotron-custom {
+      padding: 30px; } }
+  .jumbotron-custom p {
+    margin-top: 30px; }
+    .jumbotron-custom p::first-letter {
+      font-size: 200%;
+      color: #333;
+      line-height: 0.5; }
+  @media (max-width: 992px) {
+    .jumbotron-custom h1 {
+      font-size: 30px; }
+    .jumbotron-custom h2 {
+      font-size: 20px; }
+    .jumbotron-custom p {
+      position: relative;
+      z-index: 1000;
+      font-size: 15px; } }
+  .jumbotron-custom .about-btn {
+    background-color: #000;
+    border-radius: 0;
+    font-family: Cantarell;
     border: none;
-    color: #999;
-    text-shadow: 0 1px 0 #333; }
+    position: relative;
+    z-index: 1000; }
+    .jumbotron-custom .about-btn:hover {
+      border: none;
+      color: #999;
+      text-shadow: 0 1px 0 #333; }
 
+/*Portrait------------*/
 .portrait {
-  padding: 40px 40px; }
+  padding: 40px 40px;
+  max-height: 480px;
+  margin: auto; }
   @media (max-width: 768px) {
     .portrait {
       margin-bottom: -60px;
@@ -96,21 +102,55 @@ body {
 
 /*--- About section------------*/
 .about {
-  z-index: 1000;
   background: #000; }
-  .about p {
+
+/*----Carousel------------*/
+.carousel-bg {
+  background: url(img/designer.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  padding-right: 0;
+  padding-left: 0;
+  border-top: 5px solid black;
+  border: 5px solid black;
+  height: 210px; }
+  @media (max-width: 992px) {
+    .carousel-bg {
+      height: 300px; } }
+
+.carousel-text {
+  text-align: center; }
+  .carousel-text .c-text {
+    position: relative; }
+    .carousel-text .c-text h2 {
+      background: rgba(0, 0, 0, 0.2);
+      margin: 0;
+      line-height: 200px;
+      font-size: 4em;
+      font-family: "Hind", sans-serif;
+      color: #fff;
+      text-shadow: 0px 3px 3px #000; }
+      @media (max-width: 992px) {
+        .carousel-text .c-text h2 {
+          line-height: 300px; } }
+
+.about-text {
+  z-index: 1000; }
+  .about-text p {
     font-size: 1.2em;
     padding: 30px;
     color: #eee;
     margin-bottom: 0; }
-    .about p::first-letter {
+    .about-text p::first-letter {
       font-size: 200%;
       color: yellow;
       line-height: 0.5; }
 
 /*--- Goal section------------*/
 .border {
-  border-top: 5px solid black;
   border-left: 5px solid black;
   padding: 40px; }
   .border p {
@@ -153,7 +193,7 @@ body {
     color: #999; }
   .skills p {
     font-size: 1.2em;
-    margin: 20px 40px;
+    margin: 20px 20px;
     color: #fff; }
 
 .skill-HTML {

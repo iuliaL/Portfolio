@@ -13,7 +13,7 @@ body {
 /*--------------------------------Navbar */
 .navbar-reset {
 	border: none;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	font: { family: $Cantarell;
 			weight: 500;
 			size: 1.2em;
@@ -63,7 +63,9 @@ body {
 }
 
 /*--- Jumbotron------------*/
-.jumbotron {
+.jumbotron-custom {
+	margin-bottom: 0;
+	border-radius: 0 !important;
 	@media (max-width: 768px) {
 		padding: 30px;
 	}
@@ -99,20 +101,59 @@ body {
     		}
 	}	
 }
-
+/*Portrait------------*/
 .portrait {
 	padding: 40px 40px;
+	max-height: 480px;
+	margin: auto;
 	@media (max-width: 768px) {
 		margin-bottom: -60px;
     	margin-top: -120px;
     	z-index: 100;
     	}
 }
-
 /*--- About section------------*/
-.about {    z-index: 1000;
-		   	background: #000;
+.about {
+	background: #000;
+}
+/*----Carousel------------*/
+.carousel-bg {
+	background: url(img/designer.jpg) no-repeat center center; 
+ 	 -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    padding-right: 0;
+    padding-left: 0;
+    border-top: 5px solid black;
+    border:  5px solid black;
+    height: 210px;
+    @media (max-width: 992px) { height: 300px;}
 
+}
+
+.carousel-text {
+		text-align: center;
+		.c-text {
+			position: relative;
+			h2 { 
+				background: darken(rgba(0,0,0,0.2), 10%);
+				margin: 0;
+				line-height: 200px;
+				font : {size: 4em; family: $Hind}
+				color: #fff;
+				text-shadow: 0px 3px 3px #000;
+
+				@media (max-width: 992px) { line-height: 300px;}
+				}
+
+		}
+	}
+
+
+.about-text {    z-index: 1000;
+		   	
 	p {
 		@include first-letter(yellow);
 		
@@ -125,7 +166,7 @@ body {
 }
 /*--- Goal section------------*/
  .border {
- 	border-top: 5px solid black;
+ 	//border-top: 5px solid black;
  	border-left: 5px solid black;
  	padding: 40px;
  
@@ -164,7 +205,7 @@ body {
  		}
 	p {
 		font-size: 1.2em;
-		margin: 20px 40px;
+		margin: 20px 20px;
 		color: #fff;
 	}
 	    
