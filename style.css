@@ -186,7 +186,7 @@ body {
     .skills {
       padding: 20px 0px; } }
   .skills h2 {
-    margin: 0 40px;
+    margin: 0 20px;
     font-weight: 700;
     color: #555; }
   .skills strong {
@@ -387,5 +387,28 @@ body {
     font-weight: 400;
     text-shadow: 0 -2px 1px black;
     color: #eee; }
+
+/*--- Footer------------*/
+.footer-links {
+  background: #000;
+  padding: 20px 0;
+  color: #666;
+  width: 200px;
+  height: 100px;
+  border-top-right-radius: 200px;
+  border-top-left-radius: 200px;
+  margin: 30px auto 0px; }
+  .footer-links .arrow {
+    position: relative;
+    top: -8px;
+    font-size: 2em; }
+  .footer-links a[class="social-icon-link"] {
+    padding: 4px;
+    position: relative; }
+    .footer-links a[class="social-icon-link"] i {
+      font-size: 2em;
+      color: #bbb; }
+      .footer-links a[class="social-icon-link"] i:hover, .footer-links a[class="social-icon-link"] i:focus {
+        color: #e6e600; }
 
 /*# sourceMappingURL=style.css.map */

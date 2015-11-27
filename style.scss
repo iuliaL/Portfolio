@@ -196,7 +196,7 @@ body {
 		padding: 20px 0px;
 	}
 	h2 {
- 		margin: 0 40px;
+ 		margin: 0 20px;
  		font-weight: 700;
  		color: #555;
  		}
@@ -238,4 +238,32 @@ body {
 }
 .skill-Git {
 	@include skill($Git);
+}
+
+/*--- Footer------------*/
+.footer-links {
+	background: #000;
+	padding: 20px 0;
+	color: #666;  
+	width: 200px;
+    height: 100px;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    margin: 30px auto 0px;
+    .arrow {
+    	position: relative;
+    	top: -8px;
+    	font-size: 2em;
+    }
+	a[class="social-icon-link"]{
+		padding: 4px;
+		position: relative;
+		i {
+			font-size: 2em;
+			color: #bbb;
+			&:hover, &:focus {
+				color: darken(yellow, 5%);
+			}
+		}
+	}
 }
