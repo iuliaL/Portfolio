@@ -9,5 +9,11 @@ $(function(){
 		$(this).find('.page-icon').css('opacity','0').hide();
  });
 	//-------------------------------
+	$('#nav-btn').click(function(){
+		$('.page-icon').show().animate({ 
+			'opacity': '1',
+			'margin-right': '15'
+		}, 600);
+	})
 
 }); //-- end doc ready
