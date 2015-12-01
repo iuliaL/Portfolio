@@ -10,31 +10,40 @@ body {
 }
 
 
+
 /*--------------------------------Navbar */
 .navbar-reset {
 	border: none;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	font: { family: $Cantarell;
 			weight: 500;
 			size: 1.2em;
 		}
 	background: #fff;
 	@media (max-width: 768px){
-		  border-bottom: 15px solid yellow;
-		  border-right: 15px solid yellow;
-		  margin-bottom: 0;
-		}
+		  border-bottom: 15px solid $yellow;
+		  border-right: 15px solid $yellow;
+		  }
+	}
+
+.nav-border {
+	@media (min-width: 769px){
+		  border-bottom: 15px solid $yellow;
+		  border-right: 15px solid $yellow;
+		  }
+ }
+
+.page-icon {
+	display: none;
+	opacity: 0;
+	margin-right: 10px;
+	color: #000;;
 }
 
-.nav-border-bottom-right {
-	@media (min-width: 769px){
-		  border-bottom: 15px solid yellow;
-		  border-right: 15px solid yellow;
-		}
- }
 .nav-btn {
 	margin-bottom: 0;
 	margin-top: 0;
+	margin-right: 0;
 	padding: 36px 15px;
 	border: none;
 	&:focus, &:hover {
@@ -63,7 +72,9 @@ body {
 }
 
 /*--- Jumbotron------------*/
-.jumbotron {
+.jumbotron-custom {
+	margin-bottom: 0;
+	border-radius: 0 !important;
 	@media (max-width: 768px) {
 		padding: 30px;
 	}
@@ -79,7 +90,10 @@ body {
 			font-size: 20px;
 		}
 		p {
+			position: relative;
+			z-index: 1000;
 			font-size: 15px;
+			
 		}
 	}
 	.about-btn {
@@ -87,6 +101,8 @@ body {
     		border-radius: 0;
     		font-family: Cantarell;
     		border: none;
+    		position: relative;
+    		z-index: 1000;
     		&:hover {
     			border: none;
     			color: #999;
@@ -94,25 +110,63 @@ body {
     		}
 	}	
 }
-
+/*Portrait------------*/
+.portrait-bg {
+	background: radial-gradient(rgba(155, 155, 155, 0.1)10%, rgba(255, 255, 255, 1) 70%), url(img/graph-paper.jpg) repeat;;
+	background-size: contain;
+}
 .portrait {
 	padding: 40px 40px;
-	@media (max-width: 768px) {
-		padding: 100px;
-    	margin-bottom: -120px;
-    	margin-top: -200px;
-    	z-index: 100;
-    	position: relative;
-    	right: -80px;
+	max-height: 480px;
+	margin: auto;
 	}
+/*--- About section------------*/
+.about {
+	background: #000;
+}
+/*----Carousel------------*/
+.carousel-bg {
+	background: url(img/designer.jpg) no-repeat center center; 
+ 	 -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    padding-right: 0;
+    padding-left: 0;
+    border-top: 5px solid black;
+    border:  5px solid black;
+    height: 210px;
+    @media (max-width: 992px) { height: 300px;}
+
 }
 
-/*--- About section------------*/
-.about {    z-index: 1000;
-    		
+.carousel-text {
+		text-align: center;
+		.c-text {
+			position: relative;
+			h2 { 
+				background: darken(rgba(0,0,0,0.2), 10%);
+				margin: 0;
+				line-height: 200px;
+				font : {size: 4em; family: $Hind}
+				color: #fff;
+				text-shadow: 0px 3px 3px #000;
+
+				@media (max-width: 992px) { line-height: 300px;}
+				}
+
+		}
+	}
+
+
+.about-text {  
+	background:  #000;
+	z-index: 1000;
+		   	
 	p {
-		@include first-letter(yellow);
-		background: #000;
+		@include first-letter($yellow);
+		
 		font-size: 1.2em;
     	padding: 30px;
     	color: #eee;
@@ -122,10 +176,10 @@ body {
 }
 /*--- Goal section------------*/
  .border {
- 	border-top: 5px solid black;
+ 	//border-top: 5px solid black;
  	border-left: 5px solid black;
  	padding: 40px;
-
+ 
  	p {
  		font-size: 1.4em;
     	font-family: $Cantarell;
@@ -148,24 +202,23 @@ body {
 	background: #000;
 	padding: 20px;
 	font-family: $Cantarell;
+	@media (max-width: 768px) {
+		padding: 20px 0px;
+	}
 	h2 {
- 		margin: 0 40px;
+ 		margin: 0 20px;
  		font-weight: 700;
  		color: #555;
  		}
  	strong {
  		color: #999;
- 		font-size: 1.3em;
- 	}
+ 		}
 	p {
 		font-size: 1.2em;
-		margin: 20px 40px;
+		margin: 20px 20px;
 		color: #fff;
 	}
-	.skill-column {
-		padding: 10px 45px;
-    	}
-    
+	    
 }
 
 .skill-HTML {
@@ -196,3 +249,38 @@ body {
 .skill-Git {
 	@include skill($Git);
 }
+
+/*--- Footer------------*/
+.footer-links {
+	background: #000;
+	padding: 20px 0;
+	color: #666;  
+	width: 200px;
+    height: 100px;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    margin: 30px auto 0px;
+    .arrow {
+    	position: relative;
+    	top: -8px;
+    	font-size: 2em;
+    }
+	a[class="social-icon-link"]{
+		padding: 4px;
+		position: relative;
+		i {
+			font-size: 2em;
+			color: #bbb;
+			&:hover, &:focus {
+				color: darken($yellow, 5%);
+			}
+		}
+	}
+}
+
+
+
+//-----------------------------------------pages
+
+@import "_about.scss";
+@import "_contact.scss";

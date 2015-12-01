@@ -1,0 +1,38 @@
+
+
+
+.wrapper {
+	min-height: 1000px;
+	background: linear-gradient(to bottom,darken(rgba(255, 255, 0, 0.35),20%),rgba(255, 255, 255, 0.1)),
+	url(img/road.jpeg) no-repeat center 10% fixed;
+	background-size: cover;
+}
+.about-title {
+	margin-right: 40px;
+	@media (min-width: 992px) {
+		margin-right: 140px;
+	}
+	margin-top: 30px;
+	font-family: $Raleway;
+	font-weight: 700;
+    font-weight: 600;
+    color: rgba(255,255,255,.9);
+    text-shadow: 2px 2px 1px black;
+}
+.story {
+	background-color: rgba(0,0,0,.7);
+	border-radius: 6px;
+	@media (min-width: 992px) {
+		width: 80%;
+		margin:  auto;
+	}
+	p {
+		@include first-letter($yellow);
+		
+		font-size: 1.2em;
+    	padding: 30px;
+    	color: #eee;
+    	margin-bottom: 0;
+    	}
+}
+
