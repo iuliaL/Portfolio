@@ -179,7 +179,6 @@ body {
  	//border-top: 5px solid black;
  	border-left: 5px solid black;
  	padding: 40px;
- 
  	p {
  		font-size: 1.4em;
     	font-family: $Cantarell;
@@ -191,9 +190,7 @@ body {
  	.honeycomb {
  		vertical-align: top;
  		@media (min-width: 768px) {width: 28%; margin-top: 20px;}
-    	@media (min-width: 992px) {width: 18%;}
-    	@media (min-width: 1200px) {margin-top: 0;}
-    		 		
+    	@media (min-width: 992px) {width: 18%; margin-top: -20px;}	 		
  	}
  }
 
@@ -202,9 +199,6 @@ body {
 	background: #000;
 	padding: 20px;
 	font-family: $Cantarell;
-	@media (max-width: 768px) {
-		padding: 20px 0px;
-	}
 	h2 {
  		margin: 0 20px;
  		font-weight: 700;

@@ -2,9 +2,11 @@
 .contact-wrap {
 	background-color: #000;
 	margin: 30px auto;
-		border-radius: 5px;
+		
 	@media (min-width: 768px) {
 		width: 70%;
+		border-radius: 5px;
+		text-align: center;
 	}
 	p {
 		@include first-letter($yellow);
