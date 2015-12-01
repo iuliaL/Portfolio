@@ -10,6 +10,7 @@ body {
 }
 
 
+
 /*--------------------------------Navbar */
 .navbar-reset {
 	border: none;
@@ -20,18 +21,25 @@ body {
 		}
 	background: #fff;
 	@media (max-width: 768px){
-		  border-bottom: 15px solid yellow;
-		  border-right: 15px solid yellow;
-		  margin-bottom: 0;
-		}
+		  border-bottom: 15px solid $yellow;
+		  border-right: 15px solid $yellow;
+		  }
 	}
 
 .nav-border {
 	@media (min-width: 769px){
-		  border-bottom: 15px solid yellow;
-		  border-right: 15px solid yellow;
+		  border-bottom: 15px solid $yellow;
+		  border-right: 15px solid $yellow;
 		  }
  }
+
+.page-icon {
+	display: none;
+	opacity: 0;
+	margin-right: 10px;
+	color: #000;;
+}
+
 .nav-btn {
 	margin-bottom: 0;
 	margin-top: 0;
@@ -103,6 +111,10 @@ body {
 	}	
 }
 /*Portrait------------*/
+.portrait-bg {
+	background: radial-gradient(rgba(155, 155, 155, 0.1)10%, rgba(255, 255, 255, 1) 70%), url(img/graph-paper.jpg) repeat;;
+	background-size: contain;
+}
 .portrait {
 	padding: 40px 40px;
 	max-height: 480px;
@@ -148,10 +160,12 @@ body {
 	}
 
 
-.about-text {    z-index: 1000;
+.about-text {  
+	background:  #000;
+	z-index: 1000;
 		   	
 	p {
-		@include first-letter(yellow);
+		@include first-letter($yellow);
 		
 		font-size: 1.2em;
     	padding: 30px;
@@ -258,8 +272,15 @@ body {
 			font-size: 2em;
 			color: #bbb;
 			&:hover, &:focus {
-				color: darken(yellow, 5%);
+				color: darken($yellow, 5%);
 			}
 		}
 	}
 }
+
+
+
+//-----------------------------------------pages
+
+@import "_about.scss";
+@import "_contact.scss";

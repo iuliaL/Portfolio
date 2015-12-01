@@ -1,0 +1,22 @@
+
+.contact-wrap{
+	background-color: #000;
+	@media (min-width: 768px) {
+		width: 70%;
+		margin: 30px auto;
+		border-radius: 5px;
+	}
+address {
+	p {
+		@include first-letter($yellow);
+		
+		font-size: 1.4em;
+    	padding: 30px;
+    	color: #eee;
+    	margin-bottom: 0;
+    	}
+    a:focus {
+    	color: rgba(255,255,255,.7);
+   		}
+	}
+}
