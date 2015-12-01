@@ -1,7 +1,7 @@
 
 $(function(){
 	//--------------navbar links icons
-	$('.page').mouseenter(function(){
+	$('.page').mouseover(function(){
 		$(this).find('.page-icon').show().animate({ 
 			'opacity': '1'
 		}, 600);
