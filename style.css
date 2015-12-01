@@ -452,22 +452,22 @@ body {
       line-height: 0.5; }
 
 .contact-wrap {
-  background-color: #000; }
+  background-color: #000;
+  margin: 30px auto;
+  border-radius: 5px; }
   @media (min-width: 768px) {
     .contact-wrap {
-      width: 70%;
-      margin: 30px auto;
-      border-radius: 5px; } }
-  .contact-wrap address p {
+      width: 70%; } }
+  .contact-wrap p {
     font-size: 1.4em;
     padding: 30px;
     color: #eee;
     margin-bottom: 0; }
-    .contact-wrap address p::first-letter {
+    .contact-wrap p::first-letter {
       font-size: 200%;
       color: #FFFF00;
       line-height: 0.5; }
-  .contact-wrap address a:focus {
+  .contact-wrap a:focus {
     color: rgba(255, 255, 255, 0.7); }
 
 /*# sourceMappingURL=style.css.map */
