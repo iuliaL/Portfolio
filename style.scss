@@ -78,7 +78,7 @@ body {
 .jumbotron-custom {
 	margin-bottom: 0;
 	border-radius: 0 !important;
-	@media (max-width: 768px) {
+	@media (max-width: 767px) {
 		padding: 30px;
 	}
 	p {
@@ -291,12 +291,13 @@ body {
     border-top-right-radius: 200px;
     border-top-left-radius: 200px;
     margin: 30px auto 0px;
-    .arrow {
+}
+ .arrow {
     	position: relative;
     	top: -8px;
     	font-size: 2em;
     }
-	a[class="social-icon-link"]{
+a[class="social-icon-link"]{
 		padding: 4px;
 		position: relative;
 		i {
@@ -307,11 +308,11 @@ body {
 			}
 		}
 	}
-}
 
 
 
-//-----------------------------------------pages
+
+/*-----------------------------------------page specific*/
 
 @import "_about.scss";
 @import "_contact.scss";

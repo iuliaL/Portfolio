@@ -5,7 +5,8 @@
 .vertical-middle {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); }
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 /*--------------------------------Base Styles*/
 body {
@@ -68,7 +69,7 @@ body {
 .jumbotron-custom {
   margin-bottom: 0;
   border-radius: 0 !important; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .jumbotron-custom {
       padding: 30px; } }
   .jumbotron-custom p {
@@ -115,9 +116,6 @@ body {
 /*----Carousel------------*/
 .carousel-bg {
   background: url(img/designer.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
   padding-right: 0;
@@ -401,10 +399,6 @@ body {
   .project-pic:hover {
     -webkit-filter: saturate(100%);
     -webkit-filter: drop-shadow(2px 2px 10px #333);
-    -webkit-transition: all 0.7s linear;
-    -moz-transition: all 0.7s linear;
-    -ms-transition: all 0.7s linear;
-    -o-transition: all 0.7s linear;
     transition: all 0.7s linear; }
 
 /*--- Footer------------*/
@@ -417,35 +411,39 @@ body {
   border-top-right-radius: 200px;
   border-top-left-radius: 200px;
   margin: 30px auto 0px; }
-  .footer-links .arrow {
-    position: relative;
-    top: -8px;
-    font-size: 2em; }
-  .footer-links a[class="social-icon-link"] {
-    padding: 4px;
-    position: relative; }
-    .footer-links a[class="social-icon-link"] i {
-      font-size: 2em;
-      color: #bbb; }
-      .footer-links a[class="social-icon-link"] i:hover, .footer-links a[class="social-icon-link"] i:focus {
-        color: #e6e600; }
 
+.arrow {
+  position: relative;
+  top: -8px;
+  font-size: 2em; }
+
+a[class="social-icon-link"] {
+  padding: 4px;
+  position: relative; }
+  a[class="social-icon-link"] i {
+    font-size: 2em;
+    color: #bbb; }
+    a[class="social-icon-link"] i:hover, a[class="social-icon-link"] i:focus {
+      color: #e6e600; }
+
+/*-----------------------------------------page specific*/
 .wrapper {
   min-height: 700px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)), url(img/hongkong.jpg) no-repeat center 35% fixed;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)), url(img/hongkong.jpg) no-repeat 70% 35% fixed;
   background-size: cover; }
   @media (max-width: 768px) {
     .wrapper {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)), url(img/hongkong.jpg) no-repeat center fixed;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)), url(img/hongkong.jpg) no-repeat 10% 0 fixed;
       background-size: cover; } }
 
 .about-title {
+  padding-top: 30px;
+  margin-top: 0;
   margin-right: 20px;
   font-size: 30px; }
 
 .story {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 6px; }
+  background-color: rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
     .story {
       width: 70%;
@@ -462,11 +460,11 @@ body {
 
 .contact-wrap {
   background-color: #000;
-  margin: 30px auto; }
+  margin: 30px auto;
+  padding-bottom: 20px; }
   @media (min-width: 768px) {
     .contact-wrap {
       width: 70%;
-      border-radius: 5px;
       text-align: center; } }
   .contact-wrap p {
     font-size: 1.4em;
@@ -479,5 +477,3 @@ body {
       line-height: 0.5; }
   .contact-wrap a:focus {
     color: rgba(255, 255, 255, 0.7); }
-
-/*# sourceMappingURL=style.css.map */

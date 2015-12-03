@@ -4,28 +4,29 @@
 .wrapper {
 	min-height: 700px;
 	background: linear-gradient(to top,rgba(0, 0, 0, 0.5),rgba(255, 255, 255, 0.1)),
-	url(img/hongkong.jpg) no-repeat center 35% fixed;
+	url(img/hongkong.jpg) no-repeat 70% 35% fixed;
 	background-size: cover;
 	@media (max-width: 768px) {
 		background: linear-gradient(to top,rgba(0, 0, 0, 0.5),rgba(255, 255, 255, 0.1)),
-	url(img/hongkong.jpg) no-repeat center fixed;
+	url(img/hongkong.jpg) no-repeat 10% 0 fixed;
 	background-size: cover;
 	}
  }
  .about-title {
+ 	padding-top: 30px; 
+ 	margin-top: 0;
 	margin-right: 20px;
 	font-size: 30px;
 }
 .story {
 	background-color: rgba(0,0,0,.5);
-	border-radius: 6px;
+	//border-radius: 6px;
 	@media (min-width: 992px) {
 		width: 70%;
 		margin-right: 0;
 	}
 	p {
 		@include first-letter($yellow);
-		
 		font-size: 1.2em;
     	padding: 30px;
     	color: #eee;
