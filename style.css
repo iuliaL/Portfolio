@@ -5,8 +5,7 @@
 .vertical-middle {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+  transform: translateY(-50%); }
 
 /*--------------------------------Base Styles*/
 body {
@@ -116,6 +115,9 @@ body {
 /*----Carousel------------*/
 .carousel-bg {
   background: url(img/designer.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
   padding-right: 0;
@@ -378,6 +380,10 @@ body {
   font-size: 25px;
   font-family: "PT Sans", sans-serif;
   text-shadow: 0px 1px 1px #ddd; }
+  @media (max-width: 767px) {
+    .projects h2 {
+      margin-top: 30px;
+      margin-bottom: 0px; } }
 
 @media (max-width: 768px) {
   .project-p {
@@ -399,6 +405,10 @@ body {
   .project-pic:hover {
     -webkit-filter: saturate(100%);
     -webkit-filter: drop-shadow(2px 2px 10px #333);
+    -webkit-transition: all 0.7s linear;
+    -moz-transition: all 0.7s linear;
+    -ms-transition: all 0.7s linear;
+    -o-transition: all 0.7s linear;
     transition: all 0.7s linear; }
 
 /*--- Footer------------*/
@@ -428,13 +438,16 @@ a[class="social-icon-link"] {
 
 /*-----------------------------------------page specific*/
 .wrapper {
+  position: relative;
   min-height: 700px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)), url(img/hongkong.jpg) no-repeat 70% 35% fixed;
   background-size: cover; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .wrapper {
       background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)), url(img/hongkong.jpg) no-repeat 10% 0 fixed;
-      background-size: cover; } }
+      background-size: cover;
+      margin-left: -15px;
+      margin-right: -15px; } }
 
 .about-title {
   padding-top: 30px;
@@ -446,6 +459,8 @@ a[class="social-icon-link"] {
   background-color: rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
     .story {
+      position: absolute;
+      right: 20px;
       width: 70%;
       margin-right: 0; } }
   .story p {
@@ -477,3 +492,5 @@ a[class="social-icon-link"] {
       line-height: 0.5; }
   .contact-wrap a:focus {
     color: rgba(255, 255, 255, 0.7); }
+
+/*# sourceMappingURL=style.css.map */
