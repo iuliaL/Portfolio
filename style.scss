@@ -217,33 +217,34 @@ body {
 }
 
 .skill-HTML {
-	@include skill($HTML);
+	@include skill($HTML,$HTML);
 }
 .skill-CSS {
-	@include skill($CSS);
+	@include skill($CSS,$CSS);
 }
 
 .skill-Sass {
-	@include skill($Sass);
+	@include skill($Sass,$Sass);
 }
 
 .skill-Bootstrap {
-	@include skill($Bootstrap);
+	@include skill($Bootstrap,$Foundation);
 }
 .skill-jQuery {
-	@include skill($jQuery);
+	@include skill($jQuery,$jQuery);
 }
 
 .skill-AJAX {
-	@include skill($AJAX);
+	@include skill($AJAX,$AJAX);
 }
 
 .skill-JS {
-	@include skill($JS);
+	@include skill($JS,$JS);
 }
 .skill-Git {
-	@include skill($Git);
+	@include skill($Git,$Git);
 }
+
 
 /*--- Projects ------------*/
 .projects {

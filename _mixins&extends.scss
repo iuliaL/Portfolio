@@ -9,7 +9,7 @@
        }
 
 
-@mixin skill($bar-color) {
+@mixin skill($bar-color,$bar-color-2) {
 	background-color: #111;
     border-radius: 0;
     border-bottom-left-radius: 15px;
@@ -26,6 +26,13 @@
     	text-align: right;
     	padding-right: 10px;
     	padding-left: 10px;
+    }
+    .skill-bar-2 {
+        background-color: lighten($bar-color-2, 5%);
+        line-height: 7px;
+        text-align: right;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     span {
     	font-size: 1.5em;
