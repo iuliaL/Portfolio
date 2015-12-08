@@ -453,31 +453,36 @@ body {
   .project-pic:hover {
     -webkit-filter: saturate(100%);
     -webkit-filter: drop-shadow(2px 2px 10px #333);
-    -webkit-transition: all 0.7s linear;
-    -moz-transition: all 0.7s linear;
-    -ms-transition: all 0.7s linear;
-    -o-transition: all 0.7s linear;
-    transition: all 0.7s linear; }
+    transition: all 1.7s linear; }
 
 /*--- Footer------------*/
-.footer-links {
+.footer {
   background: #000;
-  padding: 20px 0;
-  color: #666;
-  width: 200px;
-  height: 100px;
-  border-top-right-radius: 200px;
-  border-top-left-radius: 200px;
-  margin: 30px auto 0px; }
+  padding-bottom: 40px; }
+  .footer hr {
+    width: 80%; }
+  .footer span {
+    font-size: 1.1em;
+    color: #666; }
 
 .arrow {
+  font-style: italic;
+  color: #666;
+  font-family: "Cantarell", sans-serif;
+  padding: 20px;
   position: relative;
-  top: -8px;
-  font-size: 2em; }
+  bottom: 43px;
+  background: black;
+  line-height: 3em; }
+  .arrow i {
+    font-size: 3em;
+    vertical-align: bottom;
+    padding-left: 10px; }
+  .arrow:hover {
+    color: white; }
 
 a[class="social-icon-link"] {
-  padding: 4px;
-  position: relative; }
+  padding: 4px; }
   a[class="social-icon-link"] i {
     font-size: 2em;
     color: #bbb; }
