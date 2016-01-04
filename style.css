@@ -3,7 +3,7 @@
   margin: auto; }
 
 .vertical-middle {
-  position: relative;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%); }
 
@@ -25,6 +25,9 @@ body {
     .navbar-reset {
       border-bottom: 15px solid #FFFF00;
       border-right: 15px solid #FFFF00; } }
+  @media (width: 768px) {
+    .navbar-reset {
+      margin-right: -15px; } }
 
 @media (min-width: 769px) {
   .nav-border {
@@ -65,7 +68,7 @@ body {
 .jumbotron-custom {
   margin-bottom: 0;
   border-radius: 0 !important; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .jumbotron-custom {
       padding: 30px; } }
   .jumbotron-custom p {
@@ -119,8 +122,6 @@ body {
   overflow: hidden;
   padding-right: 0;
   padding-left: 0;
-  border-top: 5px solid black;
-  border: 5px solid black;
   height: 210px; }
   @media (max-width: 992px) {
     .carousel-bg {
@@ -133,7 +134,7 @@ body {
     .carousel-text .c-text h2 {
       background: rgba(0, 0, 0, 0.2);
       margin: 0;
-      line-height: 200px;
+      line-height: 210px;
       font-size: 4em;
       font-family: "Hind", sans-serif;
       color: #fff;
@@ -156,45 +157,41 @@ body {
       line-height: 0.5; }
 
 /*--- Goal section------------*/
-.border {
-  border-left: 5px solid black;
+.goal {
   padding: 40px; }
-  .border p {
-    font-size: 1.4em;
-    font-family: "Cantarell", sans-serif;
+  .goal h2 {
+    font-size: 25px; }
+  .goal p {
+    font-size: 1.3em;
+    font-family: "Hind", sans-serif;
     color: #333;
     display: inline-block; }
     @media (min-width: 768px) {
-      .border p {
-        width: 70%; } }
+      .goal p {
+        width: 70%;
+        padding-right: 20px; } }
     @media (min-width: 992px) {
-      .border p {
+      .goal p {
         width: 80%; } }
-  .border .honeycomb {
+  .goal .honeycomb {
     vertical-align: top; }
     @media (min-width: 768px) {
-      .border .honeycomb {
+      .goal .honeycomb {
         width: 28%;
-        margin-top: 20px; } }
+        margin-top: 0px; } }
     @media (min-width: 992px) {
-      .border .honeycomb {
-        width: 18%; } }
-    @media (min-width: 1200px) {
-      .border .honeycomb {
-        margin-top: 0; } }
+      .goal .honeycomb {
+        width: 18%;
+        margin-top: -30px; } }
 
 /*--- Skills section------------*/
 .skills {
   background: #000;
-  padding: 20px;
-  font-family: "Cantarell", sans-serif; }
-  @media (max-width: 768px) {
-    .skills {
-      padding: 20px 0px; } }
+  padding: 20px; }
   .skills h2 {
     margin: 0 20px;
-    font-weight: 700;
-    color: #555; }
+    color: #fff;
+    font-size: 25px; }
   .skills strong {
     color: #999; }
   .skills p {
@@ -208,13 +205,17 @@ body {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: none;
-  height: 30px;
+  height: 25px;
   overflow: visible; }
   .skill-HTML .skill-bar {
-    background-color: #d6411b;
+    background-color: #a93315;
     box-shadow: 0 -2px 1px black;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-HTML .skill-bar-2 {
+    background-color: #e7603d;
     line-height: 7px;
     text-align: right;
     padding-right: 10px;
@@ -232,13 +233,17 @@ body {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: none;
-  height: 30px;
+  height: 25px;
   overflow: visible; }
   .skill-CSS .skill-bar {
-    background-color: #0000e6;
+    background-color: #19703e;
     box-shadow: 0 -2px 1px black;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-CSS .skill-bar-2 {
+    background-color: #2cc36b;
     line-height: 7px;
     text-align: right;
     padding-right: 10px;
@@ -256,13 +261,17 @@ body {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: none;
-  height: 30px;
+  height: 25px;
   overflow: visible; }
   .skill-Sass .skill-bar {
-    background-color: #c0407f;
+    background-color: #9a3366;
     box-shadow: 0 -2px 1px black;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-Sass .skill-bar-2 {
+    background-color: #cc6699;
     line-height: 7px;
     text-align: right;
     padding-right: 10px;
@@ -280,13 +289,17 @@ body {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: none;
-  height: 30px;
+  height: 25px;
   overflow: visible; }
   .skill-Bootstrap .skill-bar {
-    background-color: #58417b;
+    background-color: #40305a;
     box-shadow: 0 -2px 1px black;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-Bootstrap .skill-bar-2 {
+    background-color: #2e5667;
     line-height: 7px;
     text-align: right;
     padding-right: 10px;
@@ -304,13 +317,17 @@ body {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: none;
-  height: 30px;
+  height: 25px;
   overflow: visible; }
   .skill-jQuery .skill-bar {
-    background-color: #252525;
+    background-color: #0c0c0c;
     box-shadow: 0 -2px 1px black;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-jQuery .skill-bar-2 {
+    background-color: #3f3f3f;
     line-height: 7px;
     text-align: right;
     padding-right: 10px;
@@ -328,13 +345,17 @@ body {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: none;
-  height: 30px;
+  height: 25px;
   overflow: visible; }
   .skill-AJAX .skill-bar {
-    background-color: #297db4;
+    background-color: #20608b;
     box-shadow: 0 -2px 1px black;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-AJAX .skill-bar-2 {
+    background-color: #3e97d3;
     line-height: 7px;
     text-align: right;
     padding-right: 10px;
@@ -352,13 +373,17 @@ body {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: none;
-  height: 30px;
+  height: 25px;
   overflow: visible; }
   .skill-JS .skill-bar {
-    background-color: #5e0e33;
+    background-color: #31071b;
     box-shadow: 0 -2px 1px black;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-JS .skill-bar-2 {
+    background-color: #8a144b;
     line-height: 7px;
     text-align: right;
     padding-right: 10px;
@@ -376,13 +401,17 @@ body {
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: none;
-  height: 30px;
+  height: 25px;
   overflow: visible; }
   .skill-Git .skill-bar {
-    background-color: #6c4a29;
+    background-color: #47311b;
     box-shadow: 0 -2px 1px black;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
+    line-height: 7px;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px; }
+  .skill-Git .skill-bar-2 {
+    background-color: #926437;
     line-height: 7px;
     text-align: right;
     padding-right: 10px;
@@ -394,53 +423,99 @@ body {
     text-shadow: 0 -2px 1px black;
     color: #eee; }
 
-/*--- Footer------------*/
-.footer-links {
-  background: #000;
-  padding: 20px 0;
-  color: #666;
-  width: 200px;
-  height: 100px;
-  border-top-right-radius: 200px;
-  border-top-left-radius: 200px;
-  margin: 30px auto 0px; }
-  .footer-links .arrow {
-    position: relative;
-    top: -8px;
-    font-size: 2em; }
-  .footer-links a[class="social-icon-link"] {
-    padding: 4px;
-    position: relative; }
-    .footer-links a[class="social-icon-link"] i {
-      font-size: 2em;
-      color: #bbb; }
-      .footer-links a[class="social-icon-link"] i:hover, .footer-links a[class="social-icon-link"] i:focus {
-        color: #e6e600; }
+/*--- Projects ------------*/
+.projects h2 {
+  font-size: 25px;
+  font-family: "PT Sans", sans-serif;
+  text-shadow: 0px 1px 1px #ddd; }
+  @media (max-width: 767px) {
+    .projects h2 {
+      margin-top: 30px;
+      margin-bottom: 0px; } }
 
+@media (max-width: 768px) {
+  .project-p {
+    margin: 0 20px 20px; } }
+@media (min-width: 768px) {
+  .project-p {
+    margin: 20px;
+    margin-top: 40px;
+    font-size: 1.1em; } }
+@media (min-width: 1200px) {
+  .project-p {
+    font-size: 1.3em;
+    margin: 40px;
+    margin-top: 60px; } }
+
+.project-pic {
+  padding: 30px;
+  -webkit-filter: grayscale(30%); }
+  .project-pic:hover {
+    -webkit-filter: saturate(100%);
+    -webkit-filter: drop-shadow(2px 2px 10px #333);
+    transition: all 1.7s linear; }
+
+/*--- Footer------------*/
+.footer {
+  background: #000;
+  padding-bottom: 40px; }
+  .footer hr {
+    width: 80%; }
+  .footer span {
+    font-size: 1.1em;
+    color: #666; }
+
+.arrow {
+  font-style: italic;
+  color: #666;
+  font-family: "Cantarell", sans-serif;
+  padding: 20px;
+  position: relative;
+  bottom: 43px;
+  background: black;
+  line-height: 3em; }
+  .arrow i {
+    font-size: 3em;
+    vertical-align: bottom;
+    padding-left: 10px; }
+  .arrow:hover {
+    color: white; }
+
+a[class="social-icon-link"] {
+  padding: 4px; }
+  a[class="social-icon-link"] i {
+    font-size: 2em;
+    color: #bbb; }
+    a[class="social-icon-link"] i:hover, a[class="social-icon-link"] i:focus {
+      color: #e6e600; }
+
+/*-----------------------------------------page specific*/
 .wrapper {
-  min-height: 1000px;
-  background: linear-gradient(to bottom, rgba(153, 153, 0, 0.35), rgba(255, 255, 255, 0.1)), url(img/road.jpeg) no-repeat center 10% fixed;
+  position: relative;
+  min-height: 700px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)), url(img/hongkong.jpg) no-repeat 70% 35% fixed;
   background-size: cover; }
+  @media (max-width: 767px) {
+    .wrapper {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)), url(img/hongkong.jpg) no-repeat 10% 0 fixed;
+      background-size: cover;
+      margin-left: -15px;
+      margin-right: -15px; } }
 
 .about-title {
-  margin-right: 40px;
-  margin-top: 30px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 2px 2px 1px black; }
-  @media (min-width: 992px) {
-    .about-title {
-      margin-right: 140px; } }
+  padding-top: 30px;
+  margin-top: 0;
+  margin-right: 20px;
+  font-size: 30px; }
 
 .story {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 6px; }
+  background-color: rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
     .story {
-      width: 80%;
-      margin: auto; } }
+      position: absolute;
+      right: 20px;
+      width: 70%;
+      margin-right: 0; } }
   .story p {
     font-size: 1.2em;
     padding: 30px;
@@ -454,10 +529,11 @@ body {
 .contact-wrap {
   background-color: #000;
   margin: 30px auto;
-  border-radius: 5px; }
+  padding-bottom: 20px; }
   @media (min-width: 768px) {
     .contact-wrap {
-      width: 70%; } }
+      width: 70%;
+      text-align: center; } }
   .contact-wrap p {
     font-size: 1.4em;
     padding: 30px;
